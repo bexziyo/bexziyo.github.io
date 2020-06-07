@@ -1,0 +1,55 @@
+@media screen and (max-width: 1200px) {
+    .progres{
+        padding:100px 0;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .progres{
+        padding: 60px 0;
+    }
+    .header-content {
+        margin: 0 auto;
+        margin-top: 150px;
+        text-align: center; 
+    }
+
+    
+    .header-info {
+        padding: 0;
+        font-family: var(--m100);
+        color: var(--gray78);
+        margin-bottom: 50px;
+        font-size: 15.36px;
+    }
+    .button-green {
+        padding: 15px 55px;
+        max-width: 100%;
+        color: white;
+        text-transform: uppercase;
+        font-family: var(--m500);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .first-input {
+        width: 100%;
+    }
+    
+    .second-input {
+        width: 100%;
+    }
+    .header-navbar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px) {
+
+
+}
+
+@media screen and (max-width: 320px) {
+
+    
+}

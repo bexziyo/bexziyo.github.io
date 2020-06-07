@@ -1,0 +1,11 @@
+:root{
+    --m100: 'Montserrat-Thin';
+    --m300: 'Montserrat-Light';
+    --m400: 'Montserrat-Regular';
+    --m500: 'Montserrat-Medium';
+    --m700: 'Montserrat-Bold';
+    --m900: 'Montserrat-Black';
+
+    --gray78: #787878;
+    --black: #1d1d1d;
+}
