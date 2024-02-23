@@ -18,3 +18,14 @@ menuBtn.addEventListener("click", () => {
   menuBtn.classList.toggle("is-active");
 });
 
+
+const openModal1 = document.getElementById('openModal1')
+const dialog1 = document.getElementById('dialog1')
+const closeModal1 = document.getElementById('closeModal1')
+
+openModal1.addEventListener("click", () => {
+  dialog1.classList.add("open-modal");
+});
+closeModal1.addEventListener("click", () => {
+  dialog1.classList.remove("open-modal");
+});
