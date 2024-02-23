@@ -453,7 +453,7 @@ transition: 0.3s ease;
     padding: 20px 10px;
   }
   .open-modal {
-    top: 30vh;
+    top: 50vh;
     left: 5vw;
 }
 .chat_img img {
