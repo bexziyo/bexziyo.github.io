@@ -22,7 +22,7 @@ svg {
 }
 body {
   background: var(--dark);
-  /* overflow: hidden; */
+  overflow-x: hidden;
   position: relative;
   font-family: "Anta", sans-serif;
   padding-left: clamp(20px, 5vw, 100px);
