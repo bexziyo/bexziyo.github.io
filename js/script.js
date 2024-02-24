@@ -29,3 +29,4 @@ openModal1.addEventListener("click", () => {
 closeModal1.addEventListener("click", () => {
   dialog1.classList.remove("open-modal");
 });
+
