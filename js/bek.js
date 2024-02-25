@@ -9,16 +9,7 @@ if (ScrollTrigger.isTouch !== 1) {
 		effects: true
 	})
 
-	gsap.fromTo('.hero-section', { opacity: 1 }, {
-		opacity: 0,
-        scrollTrigger: {
-        trigger: ".hero-section",
-        start: "center",
-        end: "720",
-        scrub: true,
-      },
-    }
-  );
+
 
 
 let itemsT = gsap.utils.toArray('.bek__top .bek__item')
