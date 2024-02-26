@@ -52,6 +52,27 @@ window.addEventListener("click", function(event) {
 
 
 // **************************************************************************************
+document.addEventListener("DOMContentLoaded", function() {
+  const carousel = document.querySelector(".carousel");
+  const brands = document.querySelectorAll(".carousel img");
+
+  let currentIndex = 0;
+
+  setInterval(() => {
+      currentIndex++;
+      if (currentIndex === brands.length) {
+          currentIndex = 0;
+          carousel.style.transition = "none"; // Отключаем анимацию для плавного перехода обратно в начало
+          carousel.style.transform = `translateX(0)`;
+          setTimeout(() => {
+              carousel.style.transition = "transform 1s linear"; // Включаем анимацию после возврата в начало
+          }); // Небольшая задержка перед включением анимации
+      } else {
+          carousel.style.transform = `translateX(-${currentIndex * (brands[0].offsetWidth + 10)}px)`; // Учитываем расстояние между изображениями
+      }
+  }, 2000); // Интервал прокрутки
+});
+// **************************************************************************************
 
 
 function progressBarAndCountNumber () {
