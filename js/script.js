@@ -52,26 +52,15 @@ window.addEventListener("click", function(event) {
 
 
 // **************************************************************************************
-document.addEventListener("DOMContentLoaded", function() {
-  const carousel = document.querySelector(".carousel");
-  const brands = document.querySelectorAll(".carousel img");
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.marquee-content");
 
-  let currentIndex = 0;
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
 
-  setInterval(() => {
-      currentIndex++;
-      if (currentIndex === brands.length) {
-          currentIndex = 0;
-          carousel.style.transition = "none"; // Отключаем анимацию для плавного перехода обратно в начало
-          carousel.style.transform = `translateX(0)`;
-          setTimeout(() => {
-              carousel.style.transition = "transform 1s linear"; // Включаем анимацию после возврата в начало
-          }); // Небольшая задержка перед включением анимации
-      } else {
-          carousel.style.transform = `translateX(-${currentIndex * (brands[0].offsetWidth + 10)}px)`; // Учитываем расстояние между изображениями
-      }
-  }, 2000); // Интервал прокрутки
-});
+for(let i=0; i<marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
 // **************************************************************************************
 
 
