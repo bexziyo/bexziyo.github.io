@@ -41,12 +41,25 @@ itemsT2.forEach(item =>{
 let itemsL = gsap.utils.toArray('.bek__left .bek__item')
 
 itemsL.forEach(item =>{
-    gsap.fromTo(item, {x: -400, opacity:0.5}, {
+    gsap.fromTo(item, {x: -400, opacity:0.9}, {
         opacity: 1, x:0,
         scrollTrigger: {
         trigger: item,
         start:'-800',
         end:'-100',
+        scrub: true
+        }
+    })
+})
+let itemsL2 = gsap.utils.toArray('.bek__left .bek__item2')
+
+itemsL2.forEach(item =>{
+    gsap.fromTo(item, {x:0, opacity:0.5, rotate:0 , y:-100 ,scale:1}, {
+        opacity: 1, x:-200, rotate:30, y:200, scale:0.8,
+        scrollTrigger: {
+        trigger: item,
+        start:'-800',
+        end:'0',
         scrub: true
         }
     })
