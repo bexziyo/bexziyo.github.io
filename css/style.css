@@ -948,6 +948,23 @@ padding-bottom: 20px;
   font-size: 14px;
   opacity: 0.8;
 }
+
+#top {
+  display: none;
+  position: fixed;
+  right: 5%;
+  bottom: 2%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+#top img {
+  padding: 15px;
+  border-radius: 5px;
+  width: 70px;
+  height: 70px;
+  background: black;
+}
 /* ***************** ************************ responsive ************************  *************************/
 
 @media (max-width: 768px) {
