@@ -298,17 +298,32 @@ p {
   width: 70px;
 }
 
-#dialog1 {
+.modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #ffffff;
+  margin: 15% auto;
+  padding: 30px;
   max-width: 600px;
   width: 100%;
   border: 1px solid #ccc;
   border-radius: 10px;
-  padding: 10px 30px;
-  background: var(--white);
   transition: 1s ease;
   box-shadow: 0px 0px 20px black;
 }
-#dialog1 a {
+.modal-content1 a {
   color: var(--dark);
   font-size: 18px;
   font-weight: 500;
@@ -316,50 +331,38 @@ p {
   text-decoration: none;
   transition: 0.2s ease;
 }
-#dialog1 a:hover {
+.modal-content1 a:hover {
   color: var(--primary-color);
   transition: 0.2s ease;
   font-size: 19px;
 }
-#dialog1 h4 {
+.modal-content1 h4 {
   color: var(--dark);
   font-size: 26px;
   font-weight: 600;
 }
-#closeModal1 {
-  position: absolute;
-  top: -70px;
-  right: -10px;
+
+.modal-content1 .closse {
+  color: var(--white);
+  font-size: 38px;
   cursor: pointer;
-}
-.op0 {
   position: absolute;
-  top: 25vh;
-  left: 35vw;
-  z-index: 999;
-  display: flex;
-  opacity: 0;
-  transition: 0.3s ease;
-  transform: scale(0);
+  top: -65px;
+  right: 0;
 }
-.open-modal {
-  position: absolute;
-  top: 25vh;
-  left: 35vw;
-  z-index: 999;
-  display: flex;
+
+.chat_img {
+  max-width: 250px;
   transition: 0.3s ease;
-  opacity: 1;
-  transform: scale(1);
 }
 .chat_img img {
   max-width: 250px;
   transition: 0.3s ease;
 }
-#dialog1 img {
+.modal-content1 img {
   transition: 0.3s ease;
 }
-#dialog1 img:hover {
+.modal-content1 img:hover {
   transform: scale(1.1);
   transition: 0.3s ease;
 }
@@ -467,7 +470,7 @@ p {
   transform-style: preserve-3d;
 }
 .sets_figure .krug img {
-  width: 210px;
+  width: 240px;
 }
 .sets_figure .cube img {
   width: 550px;
@@ -589,7 +592,7 @@ height: 100vh;
 width: 100%;
 } */
 .me_img2 img {
-  max-width: 500px;
+  max-width: 520px;
   width: 100%;
 }
 .aboutcontent .right_content {
@@ -603,10 +606,9 @@ width: 100%;
   left: 0;
   bottom: 0;
   z-index: 2;
-  background-image: url(/all_img/bglinees.png);
+  background-image: url(/all_img/bglinees.webp);
   background-position: 50% 50%;
   background-size: cover;
-
 }
 
 .aboutcontent .right_content .div-block-14 {
@@ -623,68 +625,76 @@ width: 100%;
   height: 80vh;
 }
 
-.right_content_start{
+.right_content_start {
   z-index: 9;
   color: var(--white);
-    position: relative;
+  position: relative;
 }
-.right_content_start h6{
+.right_content_start h6 {
   backdrop-filter: blur(4px);
-    background: linear-gradient(89.96deg,hsla(0,0%,100%,.05) .03%,hsla(0,0%,100%,.008) 49.67%,hsla(0,0%,100%,.05) 99.96%);
-    border: 1px solid hsla(0,0%,100%,.1);
-    border-radius: 100px;
-    display: inline-block;
-    margin-bottom: 22px;
-    padding: 7px 14px;
+  background: linear-gradient(
+    89.96deg,
+    hsla(0, 0%, 100%, 0.05) 0.03%,
+    hsla(0, 0%, 100%, 0.008) 49.67%,
+    hsla(0, 0%, 100%, 0.05) 99.96%
+  );
+  border: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-radius: 100px;
+  display: inline-block;
+  margin-bottom: 22px;
+  padding: 7px 14px;
 }
-.right_content_start h6 span{
+.right_content_start h6 span {
   -webkit-text-fill-color: transparent;
-    background: linear-gradient(264.28deg,#dec7ff -38.2%,#5c27fe 103.12%),#fff;
-    -webkit-background-clip: text;
-    background-clip: text;
+  background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%), #fff;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
-.right_content_start  p{
+.right_content_start p {
   font-size: 16px;
   font-weight: 300;
 }
-.right_content_start  p span{
+.right_content_start p span {
   font-weight: 600;
   color: rgb(0, 255, 255);
 }
 
-
-
-.others_block{
+.others_block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: center;
 }
-.others_block .o_block img{
+.others_block .o_block img {
   max-width: 100px;
   width: 100%;
   margin-bottom: 20px;
 }
 
-.others_block .o_block{
+.others_block .o_block {
   margin-top: 20px;
-    overflow: hidden;
-    backdrop-filter: blur(0.7em);
-    position: static;
-    z-index: 1;
-    padding: 30px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: hsla(0, 0%, 100%, 0.17) rgba(250, 106, 106, 0.08) #202020 hsla(0, 0%, 84.8%, 0.08);
-    border-radius: 20px;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #001038, rgba(0, 16, 56, 0.12) 50%, hsla(0, 0%, 100%, 0));
-    color: var(--white);
-    width: clamp(200px, 20vw, 600px);
-    transition: .2s ease;
+  overflow: hidden;
+  backdrop-filter: blur(0.7em);
+  position: static;
+  z-index: 1;
+  padding: 30px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 100%, 0.17) rgba(250, 106, 106, 0.08) #202020
+    hsla(0, 0%, 84.8%, 0.08);
+  border-radius: 20px;
+  background-color: transparent;
+  background-image: linear-gradient(
+    180deg,
+    #001038,
+    rgba(0, 16, 56, 0.12) 50%,
+    hsla(0, 0%, 100%, 0)
+  );
+  color: var(--white);
+  width: clamp(200px, 20vw, 600px);
+  transition: 0.2s ease;
 }
-
 
 .others_block .o_block:hover:after {
   left: -30%;
@@ -695,7 +705,13 @@ width: 100%;
   transition-timing-function: linear;
 }
 .others_block .o_block:after {
-  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0.13), hsla(0, 0%, 100%, 0.13) 77%, hsla(0, 0%, 100%, 0.5) 92%, hsla(0, 0%, 100%, 0));
+  background: linear-gradient(
+    90deg,
+    hsla(0, 0%, 100%, 0.13),
+    hsla(0, 0%, 100%, 0.13) 77%,
+    hsla(0, 0%, 100%, 0.5) 92%,
+    hsla(0, 0%, 100%, 0)
+  );
   content: "";
   height: 200%;
   left: -210%;
@@ -705,36 +721,38 @@ width: 100%;
   transition: all 0.7s ease 0s;
   width: 200%;
 }
-.others_block .o_block p{
+.others_block .o_block p {
   font-size: 24px;
   text-shadow: 2px 2px 2px var(--primary-color);
 }
 
-
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
-#progress_content , #about{
+#progress_content,
+#about {
   padding: 50px 0px;
 }
 
-.skill_content{
+.skill_content {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 .skill_content .parent-skill {
-  width: 200px;
+  max-width: clamp(160px, 13vw , 230px);
+  width: 100%;
   height: auto;
 }
-.skill_content  .skill {
-  width: 200px;
-  height: 200px;
+.skill_content .skill {
+  width: 100%;
+ height: clamp(160px, 28vh , 230px);
   border-radius: 100%;
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
   -ms-border-radius: 100%;
   -o-border-radius: 100%;
-  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  box-shadow: 0px 0px 15px var(--primary-color);
   /* background-color: conic-gradient(#f9004d 10%, #212428 0); */
   display: flex;
   align-items: center;
@@ -756,13 +774,13 @@ width: 100%;
 }
 
 .skill_content .progress-number {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--white);
   font-size: 2rem;
 }
 
-.skill_content  .title {
-  font-family: 'Poppins', sans-serif;
+.skill_content .title {
+  font-family: "Poppins", sans-serif;
   color: var(--white);
   font-size: 2rem;
   display: block;
@@ -772,6 +790,13 @@ width: 100%;
 .bek__item {
   will-change: transform;
 }
+/* ***************** ************************ skill ************************  *************************/
+
+.skill .progress img {
+  width: 50px;
+  margin-left: 5px;
+}
+
 /* ***************** ************************ responsive ************************  *************************/
 
 @media (max-width: 768px) {
@@ -828,7 +853,7 @@ width: 100%;
     left: 5vw;
   }
   .chat_img img {
-    max-width: 150px;
+    max-width: 140px;
   }
   #dialog1 h4 {
     font-size: 20px;
@@ -838,7 +863,7 @@ width: 100%;
   }
 
   #sets {
-    padding: 50px 0px;
+    padding: 20px 0px;
   }
   .set2 {
     transform: translateY(0px);
@@ -847,6 +872,21 @@ width: 100%;
   .sets_figure .cube {
     bottom: 142vh;
     right: -60vw;
+  }
+
+  .aboutcontent .right_content {
+    padding-top: 20px;
+  }
+  .others_block .o_block {
+    width: clamp(200px, 100vw, 600px);
+  }
+  .skill_content .parent-skill {
+    max-width: 160px;
+  }
+  .skill_content .skill {
+    max-width: 160px;
+    width: 100%;
+    height: 160px;
   }
 }
 /*# sourceMappingURL=style.css.map */

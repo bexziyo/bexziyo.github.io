@@ -19,15 +19,35 @@ menuBtn.addEventListener("click", () => {
 
 // **************************************************************************************
 
-const openModal1 = document.getElementById('openModal1')
-const dialog1 = document.getElementById('dialog1')
-const closeModal1 = document.getElementById('closeModal1')
+// const openModal1 = document.getElementById('openModal1')
+// const dialog1 = document.getElementById('dialog1')
+// const closeModal1 = document.getElementById('closeModal1')
 
-openModal1.addEventListener("click", () => {
-  dialog1.classList.add("open-modal");
+// openModal1.addEventListener("click", () => {
+//   dialog1.classList.add("open-modal");
+// });
+// closeModal1.addEventListener("click", () => {
+//   dialog1.classList.remove("open-modal");
+// });
+
+let openModalBtn = document.getElementById("openModalBtn");
+let modal = document.getElementById("myModal");
+let closeModalBtn = document.getElementById("closeModalBtn");
+
+openModalBtn.addEventListener("click", function() {
+    modal.style.display = "block";
+
 });
-closeModal1.addEventListener("click", () => {
-  dialog1.classList.remove("open-modal");
+
+closeModalBtn.addEventListener("click", function() {
+    modal.style.display = "none";
+
+});
+
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
 });
 
 
@@ -35,6 +55,7 @@ closeModal1.addEventListener("click", () => {
 
 
 function progressBarAndCountNumber () {
+
   const progress = document.querySelectorAll('.progress');
   let count = 0;
   // You must put the maximum number in the MAX variable.
@@ -54,4 +75,7 @@ function progressBarAndCountNumber () {
   }, 50);
 }
 
-progressBarAndCountNumber();
+setTimeout( function() { progressBarAndCountNumber();; }, 4000);
+
+
+
