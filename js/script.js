@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function scrollToTop(duration) {
   var start = window.pageYOffset || document.documentElement.scrollTop,
       currentTime = 0,
-      increment = 20;
+      increment = 200;
 
   var animateScroll = function () {
       currentTime += increment;

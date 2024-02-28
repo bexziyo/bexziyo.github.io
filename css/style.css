@@ -31,8 +31,8 @@ svg {
   --blue2: #16c2f1;
 }
 
-html{
-  scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth !important;
 }
 
 body {
@@ -41,6 +41,7 @@ body {
   position: relative;
   font-family: "Anta", sans-serif;
   width: 100%;
+  scroll-behavior: smooth !important;
 }
 body::-webkit-scrollbar {
   width: 12px; /* ширина scrollbar */
@@ -53,7 +54,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px; /* закругления плашки */
   border: 3px solid var(--white); /* padding вокруг плашки */
 }
-section , footer {
+section,
+footer {
   padding-left: clamp(20px, 5vw, 100px);
   padding-right: clamp(20px, 5vw, 100px);
 }
@@ -237,7 +239,7 @@ p {
   background: linear-gradient(264.28deg, #dec7ff -38.2%, #5c27fe 103.12%);
   border-radius: 10px;
   color: white;
-  padding: 14px 56px;
+  padding: 14px 50px;
   transition: all 0.3s ease-in-out;
 }
 
@@ -740,13 +742,23 @@ width: 100%;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
 #progress_content,
 #about {
   padding-top: 50px;
   padding-bottom: 50px;
+  position: relative;
 }
-#partners{
-padding: 0px;
+#partners,
+#projects {
+  padding: 0px;
+}
+
+.lline img {
+  left: 0;
+  position: absolute;
+  top: -100%;
+  z-index: -1;
 }
 
 .skill_content {
@@ -826,7 +838,6 @@ padding: 0px;
   font-size: 50px;
 }
 
-
 .marquee {
   width: var(--marquee-width);
   height: var(--marquee-height);
@@ -876,10 +887,10 @@ padding: 0px;
   filter: grayscale(0);
   transition: 0.3s ease;
 }
-.rezba{
+.rezba {
   position: relative;
 }
-.rezba img{
+.rezba img {
   position: absolute;
   z-index: -1;
   max-width: 300px;
@@ -887,12 +898,115 @@ padding: 0px;
   /* top: 100px; */
 }
 
+/* ***************** ************************ Keys ************************  *************************/
+.go_to_projects {
+  text-align: center;
+}
+#projects a span{
+  background: linear-gradient(
+    89.96deg,
+    hsla(0, 0%, 100%, 0.05) 0.03%,
+    hsla(0, 0%, 100%, 0.008) 49.67%,
+    hsla(0, 0%, 100%, 0.05) 99.96%
+  );
+}
+.accordion_img_section {
+  display: flex;
+  width: 100%;
+  height: 90vh;
+}
+.accordion {
+  width: 35%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
 
+.accordion2 {
+  width: 65%;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+}
 
+.accordion3 {
+  width: 60%;
+  display: flex;
+  overflow: hidden;
+  height: auto;
+}
+.accordion4 {
+  width: 40%;
+  height: auto;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.tab {
+  position: relative;
+  flex: 1;
+  height: inherit;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+.tab img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s ease;
+}
+
+.caption {
+  position: absolute;
+  z-index: 2;
+  white-space: nowrap;
+  bottom: 20px;
+  opacity: 0;
+}
+
+.caption h2 {
+  margin-bottom: 2px;
+  text-overflow: clip;
+  font-size: clamp(20px, 40vw, 56px);
+  text-wrap: wrap;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.caption p {
+  margin: 0;
+  font-family: "Open Sans";
+  font-size: clamp(14px, 18px, 20px);
+  text-wrap: wrap;
+}
+
+/* --- Hover Effects --- */
+
+.tab:hover img {
+  opacity: 0.5;
+}
+
+.tab:hover {
+  flex: 2;
+  transition: all 0.4s ease;
+}
+
+.tab:hover .caption {
+  transition: all 0.4s ease;
+  opacity: 1;
+}
 /* ***************** ************************ footer ************************  *************************/
-footer{
-padding-top: 100px;
-padding-bottom: 20px;
+footer {
+  padding-top: 100px;
+  padding-bottom: 20px;
   position: relative;
   color: var(--white);
   /* background: url(/all_img/coinonehome023.png) center center/ cover no-repeat; */
@@ -904,46 +1018,46 @@ padding-bottom: 20px;
   font-weight: 600;
   cursor: default;
   z-index: 99;
-
 }
-.footer_logo p{
+.footer_logo p {
   margin-top: 10px;
   max-width: 90%;
   font-size: 14px;
   font-weight: 100;
 }
-.footer_menu a{
+.footer_menu a {
   color: var(--white);
-    font-size: 18px;
-    text-decoration: none;
-    margin: 0px 12px;
-    transition: 0.3s;
-
+  font-size: 18px;
+  text-decoration: none;
+  margin: 0px 12px;
+  transition: 0.3s;
 }
-.footer_menu a:hover , .footer_contacts a:hover{
+.footer_menu a:hover,
+.footer_contacts a:hover {
   color: var(--blue1);
 }
-.footer_contacts , .footer_menu , .footer_socials{
+.footer_contacts,
+.footer_menu,
+.footer_socials {
   display: flex;
   justify-content: center;
 }
-.footer_contacts a{
+.footer_contacts a {
   color: var(--white);
-    font-size: 18px;
-    transition: 0.3s;
-    text-decoration: none;
-    line-height: 2em;
+  font-size: 18px;
+  transition: 0.3s;
+  text-decoration: none;
+  line-height: 2em;
 }
 
-
-.copyrgiht{
+.copyrgiht {
   text-align: center;
   margin-top: 30px;
   border-top: 1px solid var(--white);
   opacity: 0.7;
   padding-top: 16px;
 }
-.copyrgiht p{
+.copyrgiht p {
   font-weight: 300;
   font-size: 14px;
   opacity: 0.8;
@@ -963,7 +1077,7 @@ padding-bottom: 20px;
   border-radius: 5px;
   width: 70px;
   height: 70px;
-  background: black;
+  /* background: black; */
 }
 /* ***************** ************************ responsive ************************  *************************/
 
@@ -1065,10 +1179,12 @@ padding-bottom: 20px;
     font-size: 34px;
   }
 
-  footer{
+  footer {
     padding-top: 50px;
   }
-  .footer_contacts , .footer_menu , .footer_socials{
+  .footer_contacts,
+  .footer_menu,
+  .footer_socials {
     margin-top: 20px;
   }
 }
