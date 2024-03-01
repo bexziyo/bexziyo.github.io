@@ -5,8 +5,9 @@ if (ScrollTrigger.isTouch !== 1) {
     ScrollSmoother.create({
 		wrapper: '.outer-wrapper',
 		content: '.bek-content',
-		smooth: 1.5,
-		effects: true
+		smooth: 2,
+		effects: true,
+        // normalizeScroll: true,
 	})
 
 

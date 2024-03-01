@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="/all_img/ico.webp">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <title>IT-Proger - Портфолио</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="/" class="logo">It proger</a>
+
+
+        <a id="menuBtn" class=""> </a>
+        <nav id="navbarMenu" class=" close">
+            <a href="/resume.pdf">Скачать резюме</a>
+            <a href="/projects">Проекты</a>
+            <a href="/contact">Контакты</a>
+            <a id="dark" href="#!"><img src="/all_img/dark1.svg" alt=""></a>
+
+        </nav>
+        <nav class="navbar d-flex align-items-center">
+            <a href="/resume.pdf">Скачать резюме</a>
+            <a href="/projects">Проекты</a>
+            <a href="/contact">Контакты</a>
+            <a id="dark2" href="#!"><img src="/all_img/dark1.svg" alt=""></a>
+        </nav>
+
+    </header>
+    <div class="outer-wrapper">
+        <div class="bek-content">
+
+            <section id="home" class="pb-5 mb-5 ">
+
+
+                <div class="home_content">
+                    <h1>Давайте общаться, чтобы работать<br> вместе и создавать привлекательные визуальные сайты</h1>
+                    </h1>
+
+                </div>
+
+                <div class="contact_content container">
+                    <div class="contact_content_right col-12 col-md-6">
+                        <img src="/all_img/Man_Business_Hi-2-3-1-624x1024.webp" alt="">
+                        <div class="contact_content_info_text">
+                            <p>24/7 <br>
+                                <span>Быстрый ответ для вас</span>
+                            </p>
+                            <p>Телефон <br>
+                            <a href="tel:+998 97 422 33 00"><span>+998 97 422 33 00</span></a>    
+                            </p>
+                            <p>Адрес:<br>
+                                <span>Узбекистан.Ташкент</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="contact_content_left col-12 col-md-6">
+                        <form action="send.php" method="post">
+
+                            <input class="w-100" type="text" name="login" placeholder="Введите Имя" required>
+                            <input class="w-100" type="email" name="email" placeholder="Введите email" required>
+                            <input class="w-100" type="tel" name="tel" placeholder="Введите телефон" required>
+                            <textarea placeholder="Напишите текст" type="text" class="w-100" name="text" id="" cols="30"
+                                rows="10"></textarea>
+                            <div class="send ">
+                                <input class="buttonn" type="submit" value="Отправить">
+                            </div>
+
+
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+
+
+
+
+            <footer id="footer">
+                <div class="footer_content d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="footer_logo col-md-3 col-12">
+                        <a class="logo" href="/">IT PROGER</a>
+                        <p>Если у вас есть идеи или проект, который вы хотели бы обсудить, свяжитесь со мной. Давайте
+                            вместе создадим что-то удивительное!</p>
+                    </div>
+
+                    <div class="footer_menu col-md-3 col-12">
+                        <a href="/resume.pdf">Скачать резюме</a>
+                        <a href="/projects">Проекты</a>
+                        <a href="/contact">Контакты</a>
+                    </div>
+
+                    <div class="footer_contacts col-md-3 col-12">
+                        <div>
+                            <a href="tel:+998974223300">+998 97 422 33 00</a>
+                            <br>
+                            <a href="mailto:bex.ziyo@mail.ru">bex.ziyo@mail.ru</a>
+                        </div>
+
+                    </div>
+
+                    <div class="footer_socials col-md-3 col-12">
+                        <div class="dsocials">
+                            <a
+                                href="https://www.facebook.com/people/Behzod-Ziyodullayev/pfbid0RWa6hKtTaSjg6naZRD18VRRiyjMVsvFH6XijaP24kos2gSK7R6AQ84eWA4xUQcDrl/">
+                                <img src="/all_img/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/bex_ziyo/"> <img
+                                    src="/all_img//instagram-svgrepo-com.svg" alt="Instagram"></a>
+                            <a href="https://t.me/bexziyo"> <img src="/all_img/telegram-svgrepo-com.svg"
+                                    alt="Telegram"></a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="copyrgiht">
+                    <p>©<span id="current-year"></span> - IT PROGER. Все права защищены. </p>
+                </div>
+            </footer>
+
+
+
+
+        </div>
+    </div>
+
+    <div id="top">
+        <img src="/all_img/top1.png" alt="png">
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const currentYearSpan = document.getElementById("current-year");
+            const currentYear = new Date().getFullYear(); // Получаем текущий год
+            currentYearSpan.textContent = currentYear; // Добавляем текущий год в текст элемента span
+        });
+    </script>
+
+
+
+
+
+
+
+    <script src="/js/gsap.min.js"></script>
+    <script src="/js/ScrollTrigger.min.js"></script>
+    <script src="/js/ScrollSmoother.min.js"></script>
+    <script src="/js/bek.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <meta property="og:image" content="/all_img/ico.webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
     <title>IT-Proger - Портфолио</title>
 </head>
 
@@ -21,16 +20,16 @@
 
         <a id="menuBtn" class=""> </a>
         <nav id="navbarMenu" class=" close">
-            <a href="#">Обо мне</a>
-            <a href="#">Проекты</a>
-            <a href="#footer">Контакты</a>
+            <a href="/resume.pdf">Скачать резюме</a>
+            <a href="/projects">Проекты</a>
+            <a href="/contact">Контакты</a>
             <a id="dark" href="#!"><img src="/all_img/dark1.svg" alt=""></a>
 
         </nav>
-        <nav class="navbar">
-            <a href="#">Обо мне</a>
-            <a href="#">Проекты</a>
-            <a href="#footer">Контакты</a>
+        <nav class="navbar d-flex align-items-center">
+            <a href="/resume.pdf">Скачать резюме</a>
+            <a href="/projects">Проекты</a>
+            <a href="/contact">Контакты</a>
             <a id="dark2" href="#!"><img src="/all_img/dark1.svg" alt=""></a>
         </nav>
 
@@ -94,7 +93,7 @@
                             </div>
 
                             <div class=" hkt">
-                                <div><img src="/all_img/col_proektov.png" alt=""></div>
+                                <div><img src="/all_img/col_proektov.webp" alt=""></div>
                                 <div>
                                     <p>Количество проектов</p>
                                     <h4>Более 40 </h4>
@@ -106,7 +105,7 @@
             </section>
 
             <section id="sets" class="">
-                <div class="sets_content d-flex flex-wrap justify-content-between  ">
+                <div class="sets_content ">
                     <div class="set set1 ">
                         <h2>Front-End</h2>
                         <p>Создание сайтов и веб-приложений используя:</p>
@@ -181,7 +180,7 @@
 
             <section id="about" class="">
                 <div class="aboutcontent d-flex justify-content-between flex-wrap">
-                    <div class="left_content col-12 col-md-6 bek__left">
+                    <div class="left_content col-12 col-md-6  bek__left">
                         <div class="me_img2 ">
                             <div class="rezba">
                                 <img class="bek__item2" src="/all_img/spring-01-1-300x277.png" alt="spring">
@@ -190,7 +189,7 @@
                         </div>
 
                     </div>
-                    <div class="right_content col-12 col-md-6">
+                    <div class="right_content col-12 col-md-6 ">
 
                         <div class="right_content_start">
                             <div>
@@ -320,7 +319,7 @@
                 </div>
 
                 <div class="lline">
-                    <img src="/all_img/line-2.29fa29de3b8bae0fc066.png" alt="">
+                    <img src="/all_img/line-2.29fa29de3b8bae0fc066.webp" alt="">
                 </div>
             </section>
             <section id="partners">
@@ -405,24 +404,22 @@
                         <div class="tab">
                             <img src="/all_img/keys/juravlev.webp" alt="keys">
                             <div class="caption">
-                                <h2>Сайт визитка</h2>
-                                <p>Сайт портфолио профессионального фотографа Владимира Журвалева  </p>
+                                <h2>Журавлёв Сайт Портфолио</h2>
+                             
                                 <a class="buttonn" href="https://juravlev.uz/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
                         <div class="tab">
                             <img src="/all_img/keys/solar.webp" alt="keys">
                             <div class="caption">
-                                <h2>Корпоративный Сайт</h2>
-                                <p>Solar Point компания занимающейся установкой солнечных панелей</p>
+                                <h2>Solar Point Корпоративный Сайт</h2>
                                 <a class="buttonn" href="https://solarpoint.uz/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
                         <div class="tab">
                             <img src="/all_img/keys/tanho.webp" alt="keys">
                             <div class="caption">
-                                <h2>Корпоративный Сайт</h2>
-                                <p>Tanho Holding  компания занимающейся производством Макаронных изделий а так же Кетчупов и Мойанезов</p>
+                                <h2>Tanho Holding Корпоративный Сайт</h2>
                                 <a class="buttonn" href="https://tanhoholding.uz/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
@@ -430,36 +427,32 @@
 
                     </div>
                     <!-- to right -->
-                    <div class="accordion2">
+                    <div class="accordion2 ">
                         <div class="tab">
-                            <img src="/all_img/keys/jmob.webp" alt="keys">
+                            <img src="/all_img/keys/jmob2.png" alt="keys">
                             <div class="caption">
-                                <h2>Мобильное меню</h2>
-                                <p>Меню для Jivago - ресторан европейской кухни</p>
+                                <h2>Jivago мобильное меню</h2>
                                 <a class="buttonn" href="https://jivago.uz/links/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
                         <div class="tab">
-                            <img src="/all_img/keys/sm01.webp" alt="keys">
+                            <img src="/all_img/keys/sm012.png" alt="keys">
                             <div class="caption">
-                                <h2>Меню Мобильное</h2>
-                                <p>Полноценный меню для Ресторна Senoir Meat House </p>
+                                <h2> Senoir Meat House меню ресторана</h2>
                                 <a class="buttonn" href="https://seniormeathouse.com/menu/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
                         <div class="tab">
-                            <img src="/all_img/keys/xam01.webp" alt="keys">
+                            <img src="/all_img/keys/xam012.png" alt="keys">
                             <div class="caption">
-                                <h2>Мобильное Мини сайт</h2>
-                                <p>Меню для Xamirchi который готовит блюдо только из теста</p>
+                                <h2>Xamirchi мини сайт</h2>
                                 <a class="buttonn" href="https://xamirchi.uz/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
                         <div class="tab">
-                            <img src="/all_img/keys/exzap01.webp" alt="keys">
+                            <img src="/all_img/keys/exzap012.png" alt="keys">
                             <div class="caption">
-                                <h2>Мобильный Link</h2>
-                                <p>Быстрые ссылки для компании Exzap который занимается продажей авто-масла и авто-запчастей</p>
+                                <h2>Exzap Link</h2>
                                 <a class="buttonn" href="https://exzap.uz/links/"> <span>Посмотреть</span></a>
                             </div>
                         </div>
@@ -472,7 +465,7 @@
                 </div>
                 <div class="go_to_projects">
 
-                    <a class="buttonn" href="#!"> <span>Все проекты</span></a>
+                    <a class="buttonn" href="/projects"> <span>Все проекты</span></a>
                 </div>
             </section>
 
@@ -480,19 +473,19 @@
 
             <footer id="footer">
                 <div class="footer_content d-flex justify-content-between align-items-center flex-wrap">
-                    <div class="col-md-3 col-12 footer_logo">
+                    <div class="footer_logo col-md-3 col-12">
                         <a class="logo" href="/">IT PROGER</a>
                         <p>Если у вас есть идеи или проект, который вы хотели бы обсудить, свяжитесь со мной. Давайте
                             вместе создадим что-то удивительное!</p>
                     </div>
 
-                    <div class="col-md-3 col-12 footer_menu">
-                        <a href="#">Обо мне</a>
-                        <a href="#">Проекты</a>
-                        <a href="#">Контакты</a>
+                    <div class="footer_menu col-md-3 col-12">
+                        <a href="/resume.pdf">Скачать резюме</a>
+                        <a href="/projects">Проекты</a>
+                        <a href="/contact">Контакты</a> 
                     </div>
 
-                    <div class="col-md-3 col-6 footer_contacts">
+                    <div class="footer_contacts col-md-3 col-12">
                         <div>
                             <a href="tel:+998974223300">+998 97 422 33 00</a>
                             <br>
@@ -501,14 +494,14 @@
 
                     </div>
 
-                    <div class="col-md-3 col-6 footer_socials">
+                    <div class="footer_socials col-md-3 col-12">
                         <div class="dsocials">
                             <a
                                 href="https://www.facebook.com/people/Behzod-Ziyodullayev/pfbid0RWa6hKtTaSjg6naZRD18VRRiyjMVsvFH6XijaP24kos2gSK7R6AQ84eWA4xUQcDrl/">
-                                <img src="/all_img/Facebook.png" alt="Facebook"></a>
-                            <a href="https://www.instagram.com/bex_ziyo/"> <img src="/all_img/Instagram.png"
+                                <img src="/all_img/facebook-svgrepo-com.svg" alt="Facebook"></a>
+                            <a href="https://www.instagram.com/bex_ziyo/"> <img src="/all_img//instagram-svgrepo-com.svg"
                                     alt="Instagram"></a>
-                            <a href="https://t.me/bexziyo"> <img src="/all_img/Telegram.png" alt="Telegram"></a>
+                            <a href="https://t.me/bexziyo"> <img src="/all_img/telegram-svgrepo-com.svg" alt="Telegram"></a>
 
                         </div>
                     </div>

@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.getElementById('top').addEventListener("click", function () {
-      scrollToTop(1000);
+      scrollToTop(10000);
   });
 });
 
